@@ -9,11 +9,11 @@
     <el-card class="box-card">
       <el-row :gutter="20">
         <el-col :span="7">
-          <el-input v-model="params.key" placeholder="请输入内容">
+          <el-input v-model="params.info" placeholder="请输入内容">
             <el-button
               slot="append"
               icon="el-icon-search"
-              @click="search()"
+              @click="getList"
             ></el-button>
           </el-input>
         </el-col>
@@ -103,6 +103,7 @@ export default {
         key: "id",
         page: 1,
         intPageSize: 10,
+        info: ""
       },
       total: 0,
       addDialogVisible: false, //控制对话框
